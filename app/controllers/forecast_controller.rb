@@ -19,7 +19,6 @@ class ForecastController < ApplicationController
 url="https://api.darksky.net/forecast/f6ee4e3fe8f1ab7cf81e5f002ed5aec9/#{@lat},#{@lng}"
     parsed_data = JSON.parse(open(url).read)
 
-
     @current_temperature = parsed_data["currently"]["temperature"]
 
     @current_summary = parsed_data["currently"]["summary"]
